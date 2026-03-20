@@ -1,95 +1,165 @@
 <div align="center">
-  
+
 # 🧪 TensorTonic Solutions
 
-**Elite-level implementations of core Machine Learning and Deep Learning algorithms from scratch.**
+**Production-Grade Implementations of Core Machine Learning Algorithms from Scratch**
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://python.org)
-[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Fundamentals-FF6F00?logo=scikit-learn&logoColor=white)]()
-[![Deep Learning](https://img.shields.io/badge/Deep%20Learning-Architecture-FF4B4B?logo=pytorch&logoColor=white)]()
-[![TensorTonic](https://img.shields.io/badge/Platform-TensorTonic-10b981)](https://tensortonic.com)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://python.org)
+[![NumPy](https://img.shields.io/badge/Powered_by-NumPy-013243?logo=numpy&logoColor=white)](https://numpy.org)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![TensorTonic Framework](https://img.shields.io/badge/Platform-TensorTonic-10b981?logo=molecule&logoColor=white)](https://tensortonic.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-*This repository serves as a comprehensive library of algorithmic solutions, automatically synchronized from [TensorTonic](https://tensortonic.com).*
+*A battle-tested, architecturally rigorous library of fundamental ML building blocks, algorithms, and deep learning architectures.*
+
+[Explore the algorithms](#-problem-directory) • [Installation](#%EF%B8%8F-installation--setup) • [Philosophy](#-engineering-philosophy) • [Roadmap](#-future-roadmap)
 
 </div>
 
 ---
 
-## 📌 Overview
+## 📖 Overview
 
-Implementing Machine Learning algorithms from scratch is the ultimate test of mathematical intuition and software engineering pragmatism. This repository contains my personal, battle-tested solutions to complex algorithmic challenges from TensorTonic. 
+Implementing complex AI algorithms from scratch is the ultimate exercise in mathematical intuition and software engineering pragmatism. This repository houses my personal, **FAANG-level** solutions to the algorithmic challenges presented by [TensorTonic](https://tensortonic.com).
 
-These aren't just textbook transcripts; they are designed to be:
-- 🚀 **Performant**: Optimized for time and space complexity, utilizing vectorization where possible.
-- 📐 **Mathematically Rigorous**: Faithful to the foundational research papers and numerical stability practices.
-- 💻 **Clean & Modular**: Written with readable, FAANG-level production-grade coding standards in mind.
+These are not standard textbook transcripts. They are engineered to be dropped into real-world, high-performance inference pipelines.
 
-My goal is to continuously expand this collection as I tackle more advanced AI challenges, building a formidable encyclopedia of machine learning building blocks.
+## 🧠 Engineering Philosophy
 
-## 🗂️ Problem Directory
+Every implementation in this repository adheres to strict production-grade standards:
 
-The solutions are organized by domain. Below is the current syllabus of implemented algorithms:
-
-### 🧠 Deep Learning & Neural Networks
-| Concept | Description | Status |
-| :--- | :--- | :---: |
-| [**Transformer**](./transformer) | Multi-head self-attention and feed-forward layers. | 🟢 |
-| [**RNN Step Backward**](./rnn-step-backward) | Backpropagation Through Time (BPTT) for recurrent cells. | 🟢 |
-| [**ROI Pooling**](./roi-pooling) | Region of Interest pooling for object detection architectures. | 🟢 |
-
-### 📊 Traditional Machine Learning
-| Concept | Description | Status |
-| :--- | :--- | :---: |
-| [**Decision Tree Split**](./decision-tree-split) | Node splitting logic based on information gain/Gini impurity. | 🟢 |
-| [**Baseline Predictor**](./baseline-predictor) | Foundational predictive models (e.g., global average/bias). | 🟢 |
-
-### 📝 NLP & Information Retrieval
-| Concept | Description | Status |
-| :--- | :--- | :---: |
-| [**TF-IDF Vectorizer**](./tfidf-vectorizer) | Text vectorization using Term Frequency-Inverse Document Frequency. | 🟢 |
-| [**BM25**](./bm25) | Modern probabilistic ranking function for search engines (Okapi BM25). | 🟢 |
-
-### 🔢 Mathematics & Linear Algebra
-| Concept | Description | Status |
-| :--- | :--- | :---: |
-| [**Matrix Transpose**](./matrix-transpose) | Efficient multi-dimensional array transposition operations. | 🟢 |
-| [**Homogeneous Transform**](./homogeneous-transform) | 3D coordinate transformations and affine matrix multiplications. | 🟢 |
-
-### 📈 Metrics & Data Processing
-| Concept | Description | Status |
-| :--- | :--- | :---: |
-| [**AUC**](./auc) | Computation of the Area Under the Receiver Operating Characteristic Curve. | 🟢 |
-| [**Streaming Minmax**](./streaming-minmax) | Real-time tracking of minimum and maximum values in data streams. | 🟢 |
+- 🚀 **Extreme Performance:** Relentless focus on **broadcasting** and **vectorization** using NumPy. `for`-loops are eliminated wherever possible to guarantee C-level execution speeds natively in Python.
+- 📐 **Numerical Stability:** Algorithms are fortified against underflow/overflow (e.g., Log-Sum-Exp tricks, epsilon clipping) ensuring deterministic and safe execution across diverse distributions.
+- 🧩 **Stateless Modularity:** Clean, pure-function architectures with typed signatures. Designed specifically for composability and drop-in integration.
+- 🧪 **Self-Contained Verification:** Each module is an isolated unit containing comprehensive algorithmic implementations alongside localized, rigorous test-cases.
 
 ---
 
-## 🛠️ Environment & Setup
+## 🗂️ Problem Directory
 
-Each algorithm folder contains its own self-contained logic and test cases. While dependencies are kept to an absolute bare minimum (typically focusing on pure Python and `numpy`), you can set up the environment structure as follows:
+The repository currently features **36 distinct algorithmic modules**, systematically categorized by domain:
 
+### ⚡ Deep Learning & Neural Networks
+*Core architectural components of modern representation learning.*
+
+| Algorithm | Description | 
+| :--- | :--- | 
+| [**Transformer**](./transformer) | Multi-head self-attention and feed-forward layers. | 
+| [**RNN Step Backward**](./rnn-step-backward) | Backpropagation Through Time (BPTT) for recurrent cells. | 
+| [**ROI Pooling**](./roi-pooling) | Region of Interest pooling for object detection architectures. | 
+| [**GRU Cell Forward**](./gru-cell-forward) | Forward pass for a Gated Recurrent Unit (GRU) cell. | 
+| [**Leaky ReLU**](./leaky-relu) | Vectorized Leaky ReLU implementation. | 
+| [**Nadam Optimizer**](./nadam-optimizer) | Perform one Nadam optimization update step. | 
+| [**Sigmoid (NumPy)**](./sigmoid-numpy) | Vectorized sigmoid activation function. | 
+
+### ⚙️ Traditional Machine Learning
+*Foundational predictive modeling and sequential decision-making.*
+
+| Algorithm | Description | 
+| :--- | :--- | 
+| [**Decision Tree Split**](./decision-tree-split) | Node splitting logic based on information gain/Gini impurity. | 
+| [**Baseline Predictor**](./baseline-predictor) | Foundational predictive models (e.g., global average/bias). | 
+| [**Gradient Descent (Quadratic)**](./gradient-descent-quadratic) | Perform gradient descent optimization on a quadratic function. | 
+| [**Isotonic Calibration**](./isotonic-calibration) | Apply isotonic regression calibration. | 
+| [**Value Iteration Step**](./value-iteration-step) | Perform one step of value iteration for MDPs. | 
+
+### 🔍 NLP & Information Retrieval
+*Techniques for sparse representation and text embedding.*
+
+| Algorithm | Description | 
+| :--- | :--- | 
+| [**TF-IDF Vectorizer**](./tfidf-vectorizer) | Text vectorization using Term Frequency-Inverse Document Frequency. | 
+| [**BM25**](./bm25) | Modern probabilistic ranking function for search engines (Okapi BM25). | 
+| [**Text Chunking**](./text-chunking) | Split tokens into fixed-size chunks with overlap. | 
+
+### 🧮 Mathematics, Probability & Linear Algebra
+*The bedrock numerical primitives powering machine learning.*
+
+| Algorithm | Description | 
+| :--- | :--- | 
+| [**Matrix Transpose**](./matrix-transpose) | Efficient multi-dimensional array transposition operations. | 
+| [**Homogeneous Transform**](./homogeneous-transform) | 3D coordinate transformations and affine matrix multiplications. | 
+| [**Bernoulli PMF**](./bernoulli-pmf) | Compute Bernoulli PMF. | 
+| [**Binomial PMF/CDF**](./binomial-pmf-cdf) | Compute Binomial PMF and CDF. | 
+| [**Bootstrap Mean**](./bootstrap-mean) | Compute bootstrap mean and confidence intervals. | 
+| [**Chi-Squared Independence**](./chi2-independence) | Compute Chi-squared test of independence. | 
+| [**Expected Value (Discrete)**](./expected-value-discrete) | Compute expected value of a discrete random variable. | 
+| [**Geometric PMF & Mean**](./geometric-pmf-mean) | Compute Geometric PMF and Mean. | 
+| [**Poisson PMF/CDF**](./poisson-pmf-cdf) | Compute Poisson PMF and CDF. | 
+| [**Sample Variance & Std Dev**](./sample-var-std) | Compute sample variance and standard deviation. | 
+| [**T-Test (One Sample)**](./t-test-one-sample) | Perform a one-sample t-test. | 
+
+### 📏 Data Processing & Metrics
+*Robust evaluation semantics and distributed feature engineering pipelines.*
+
+| Algorithm | Description | 
+| :--- | :--- | 
+| [**AUC**](./auc) | Computation of the Area Under the Receiver Operating Characteristic Curve. | 
+| [**Streaming Minmax**](./streaming-minmax) | Real-time tracking of minimum and maximum values in data streams. | 
+| [**Batch Generator**](./batch-generator) | Randomly shuffle a dataset and yield mini-batches. | 
+| [**Binning**](./binning) | Assign each value to an equal-width bin. | 
+| [**ETL Dependency Orchestration**](./etl-dependency-orchestration) | Schedule ETL tasks respecting dependencies and resource limits. | 
+| [**Impute Missing**](./impute-missing) | Fill NaN values in each feature column using mean or median. | 
+| [**Jaccard Similarity**](./jaccard-similarity) | Compute the Jaccard similarity between two item sets. | 
+| [**Min-Max Scaling**](./min-max-scaling) | Scale each column of the data matrix to the [0, 1] range. | 
+| [**Robust Scaling**](./robust-scaling) | Scale values using median and interquartile range. | 
+| [**Winsorization**](./winsorization) | Clip values at the given percentile bounds. | 
+
+---
+
+## 🛠️ Installation & Setup
+
+Every algorithm is meticulously isolated. The entire repository is virtually dependency-free out of the box, requiring only Standard Python and `numpy`.
+
+### 1. Clone the repository
 ```bash
-# Clone the repository
-git clone https://github.com/YourUsername/TensorTonic-Solutions.git
+git clone https://github.com/SoubhagyaJain/TensorTonic-Solutions.git
 cd TensorTonic-Solutions
-
-# (Optional) Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-# Install standard dependencies (if any requirement files are added)
-# pip install numpy
 ```
 
-## 🚀 Roadmap
+### 2. Prepare the Virtual Environment
+```bash
+# Initialize isolated environment
+python3 -m venv venv
 
-As I dive deeper into the problem sets, I will be expanding the repository with solutions in the following domains:
-- [ ] Large Language Model inference optimizations (KV Caching, RoPE).
-- [ ] Core Reinforcement Learning algorithms (PPO, Q-Learning).
-- [ ] Advanced Optimization techniques (AdamW, L-BFGS).
-- [ ] Scalable system design components for ML pipelines.
+# Activate (macOS/Linux)
+source venv/bin/activate
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install extreme minimum requirements
+pip install numpy
+```
+
+### 3. Usage & Testing
+Navigate to any algorithmic module and explicitly review the code or run it interactively (many scripts act as their own entrypoints):
+
+```bash
+cd min-max-scaling
+python main.py
+```
+
+*(Note: Advanced solutions might integrate custom test cases utilizing standard Python assertions for rapid correctness validation).*
+
+---
+
+## 🚀 Future Roadmap
+
+This collection is perpetually growing. Priority architectures currently in the pipeline:
+
+- [ ] **LLM Systems Integration:** `KV Caching`, `Rotary Positional Embeddings (RoPE)` optimizations.
+- [ ] **Reinforcement Learning:** `Proximal Policy Optimization (PPO)`, `DQN / Q-Learning` logic.
+- [ ] **Advanced Solvers:** Advanced Optimization techniques including `AdamW` and `L-BFGS`.
+- [ ] **System Design Components:** Streaming aggregators and distributed ML scheduling algorithms.
 
 ---
 
 <div align="center">
+
+**Contributions & Networking**
+<br/>
+If you share a passion for optimizing the math beneath the abstractions, feel free to inspect the implementations.
+
 <i>"What I cannot create, I do not understand." — Richard Feynman</i>
+
 </div>
